@@ -8,9 +8,9 @@ const price = 100;
 
 {
   const product = prompt ('Наименование товара?', 'телевизор');
-  let remainder = +prompt ('Количество товара?',10);
+  const remainder = +prompt ('Количество товара?',10);
   const category = prompt ('Категория товара?', 'техника');
-  let price = +prompt ('Цена товара?', 100);
+  const price = +prompt ('Цена товара?', 100);
 
 
 

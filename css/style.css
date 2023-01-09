@@ -47,39 +47,62 @@ input, textarea:focus {
 
 .container {
   width: 792px;
-  height: 823px;
   background-color: #F2F0F9;
   margin: 0 auto;
 }
 
+.container__modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
 .title {
-  padding: 32px 0 0 106px;
+  margin-bottom: 21px;
+  padding: 32px 0 21px 28px;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.1em;
+  border-bottom: 1px solid #C6C2DE;
+}
+
+.form__close {
+  position: relative;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+.form__close:before {
+  position: absolute;
+  content: url("../img/close.svg");
+  width: 20px;
+  height: 20px;
+  display: block;
+  left: 636px;
+  top: 20px;
+}
+
+.form__grid {
+
 }
 
 .form {
+  max-width: 580px;
   margin: 0 auto;
-  padding: 43px 106px 99px;
 }
 
-.form__block {
-  margin-bottom: 32px;
-  width: 580px;
+.form__flex {
+  display: flex;
+  justify-content: space-between;
   padding: 28px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  border: none;
-  background-color: #fff;
-}
-
-
-
-.form__name {
-  display: block;
-  padding-bottom: 12px;
 }
 
 .form__input {
@@ -88,8 +111,86 @@ input, textarea:focus {
   height: 40px;
 }
 
+.form__text {
+  height: 104px;
+}
+
+.form__block {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 40px 40px 40px 40px 40px;
+  gap: 32px 24px;
+  max-width: 580px;
+  padding: 28px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+}
+
+.form__grid-name {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.form__grid-text {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.form__grid-category {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.form__grid-unit {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.form__grid-number {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.form__grid-price {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.form__grid-btn {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+
+.form__grid-btn:after {
+  position: absolute;
+  content: "Добавить изображение";
+  cursor: pointer;
+  padding: 11px 29px;
+  background-color: #6D5BD0;
+  color: #fff;
+  top: 0;
+  right: 0;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form__name {
+  display: block;
+  padding-bottom: 12px;
+}
+
+
+
 .form__discount {
-  width: 474px;
+  width: 200px;
   height: 40px;
   margin-left: 50px;
   background-color: #EEEEEE;
@@ -112,9 +213,8 @@ input, textarea:focus {
   margin-left: -70px;
 }
 
-.form-text {
+textarea {
   resize: none;
-  height: 112px;
 }
 
 .form__check-discount:before {
@@ -156,7 +256,6 @@ input, textarea:focus {
 }
 
 .form__btn {
-  margin-left: 340px;
   padding: 10px 25px;
   background: #6D5BD0;
   border-radius: 6px;
@@ -167,6 +266,72 @@ input, textarea:focus {
   line-height: 19px;
 }
 
+@media (max-width: 648px) {
+  .container__modal {
+    width: 426px;
+  }
+  .title {
+    max-width: 306px;
+    margin: 0 auto;
+  }
+  .form__block {
+    grid-template-columns: 250px;
+    grid-template-rows: repeat(9, 40px);
+    margin-bottom: 20px;
+  }
+  .form__grid-name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .form__grid-text {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .form__grid-category {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .form__grid-unit {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+
+  .form__grid-number {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+  }
+
+  .form__grid-price {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+  }
+  .form__grid-btn {
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+  }
+  .form {
+    max-width: 306px;
+  }
+  .form__flex {
+    padding: 0;
+    flex-direction: column-reverse;
+    gap: 15px;
+    align-items: center;
+  }
+  .form__btn {
+    padding: 10px 47px;
+    font-size: 14px;
+    line-height: 19px;
+    align-items: center;
+  }
+  .form__close:before {
+    left: 340px;
+    top: 20px;
+  }
+}
 
 
 

@@ -11,22 +11,24 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container container__modal">
+    <button class="form__close"></button>
+    <div class="modal__wrapper">
     <h1 class="title">ДОБАВИТЬ ТОВАР</h1>
     <div class="form__grid">
     <form class="form" action="#">
       <fieldset class="form__block">
-        <label class="form__name">
+        <label class="form__name form__grid-name">
           наименование
           <input class="form__input" type="text" name="product">
         </label>
 
-        <label class="form__name">
+        <label class="form__name form__grid-category">
           категория
           <input class="form__input" type="text" name="product">
         </label>
 
-        <label class="form__name">
+        <label class="form__name form__grid-unit">
           единицы измерения
           <input class="form__input" type="text" name="product">
         </label>
@@ -40,25 +42,32 @@
         </label>
       </div>
 
-        <label class="form__name">
+        <label class="form__name form__grid-text">
           описание
           <textarea class="form__input form__text" name="product"></textarea>
         </label>
 
-        <label class="form__name">
+        <label class="form__name form__grid-number">
           количество
           <input class="form__input" type="number" name="product">
         </label>
 
-        <label class="form__name">
+        <label class="form__name form__grid-price">
           цена
           <input class="form__input" type="number" name="product">
         </label>
+        <label class="form__grid-btn">
+          <input  type="file" name="file">
+        </label>
       </fieldset>
-
+      <div class="form__flex">
+      <p>Итоговая стоимость: $ 900.00</p>
       <button class="form__btn" type="submit">ДОБАВИТЬ ТОВАР</button>
+      </div>
     </form>
     </div>
+  </div>
+  </div>
   </div>
 
 </body>
