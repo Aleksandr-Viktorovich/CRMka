@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CRM</title>
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">ДОБАВИТЬ ТОВАР</h1>
+    <div class="form__grid">
+    <form class="form" action="#">
+      <fieldset class="form__block">
+        <label class="form__name">
+          наименование
+          <input class="form__input" type="text" name="product">
+        </label>
+
+        <label class="form__name">
+          категория
+          <input class="form__input" type="text" name="product">
+        </label>
+
+        <label class="form__name">
+          единицы измерения
+          <input class="form__input" type="text" name="product">
+        </label>
+        <div class="checked">
+        <label class="form__name form__check-name" for="btn">
+          дисконт
+        <input class="form__check-discount" type="checkbox" name="product" id="btn" checked>
+        </label>
+        <label for="btn" class="form__name-checked">
+          <input class="form__discount form__name-checked" type="text" name="product">
+        </label>
+      </div>
+
+        <label class="form__name">
+          описание
+          <textarea class="form__input form__text" name="product"></textarea>
+        </label>
+
+        <label class="form__name">
+          количество
+          <input class="form__input" type="number" name="product">
+        </label>
+
+        <label class="form__name">
+          цена
+          <input class="form__input" type="number" name="product">
+        </label>
+      </fieldset>
+
+      <button class="form__btn" type="submit">ДОБАВИТЬ ТОВАР</button>
+    </form>
+    </div>
+  </div>
+
+</body>
+</html>

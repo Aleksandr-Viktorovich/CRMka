@@ -1,0 +1,172 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6E6893;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+input, textarea {
+  border: none;
+  border-radius: 6px;
+  background-color: #F2F0F9;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+input, textarea:focus {
+  outline-color:#6D5BD0;
+}
+
+.container {
+  width: 792px;
+  height: 823px;
+  background-color: #F2F0F9;
+  margin: 0 auto;
+}
+
+.title {
+  padding: 32px 0 0 106px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+}
+
+.form {
+  margin: 0 auto;
+  padding: 43px 106px 99px;
+}
+
+.form__block {
+  margin-bottom: 32px;
+  width: 580px;
+  padding: 28px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+}
+
+
+
+.form__name {
+  display: block;
+  padding-bottom: 12px;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+.form__discount {
+  width: 474px;
+  height: 40px;
+  margin-left: 50px;
+  background-color: #EEEEEE;
+}
+
+.form__check-discount {
+  width: 39px;
+}
+
+.form__check-name {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.form__check-discount {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-left: -70px;
+}
+
+.form-text {
+  resize: none;
+  height: 112px;
+}
+
+.form__check-discount:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #F2F0F9;
+  border-radius: 6px;
+}
+
+.form__check-discount:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  width: 20px;
+  height: 15px;
+  border: 3px solid black;
+  border-top: none;
+  border-right: none;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+.form__check-discount:focus-visible {
+  outline: none
+}
+
+.form__check-discount:checked:after {
+  opacity: 1
+}
+
+.form__check-discount:checked+.form__name-checked {
+  background-color: #F2F0F9;
+}
+
+.form__btn {
+  margin-left: 340px;
+  padding: 10px 25px;
+  background: #6D5BD0;
+  border-radius: 6px;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+
+
+
