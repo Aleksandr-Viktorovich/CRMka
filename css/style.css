@@ -57,6 +57,7 @@ input, textarea:focus {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding-top: 32px;
 }
 
 .modal__wrapper {
@@ -66,7 +67,6 @@ input, textarea:focus {
 
 .title {
   margin-bottom: 21px;
-  padding: 32px 0 21px 28px;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -79,6 +79,8 @@ input, textarea:focus {
   border: none;
   width: 20px;
   height: 20px;
+  left: 636px;
+  top: 20px;
 }
 
 .form__close:before {
@@ -87,8 +89,8 @@ input, textarea:focus {
   width: 20px;
   height: 20px;
   display: block;
-  left: 636px;
-  top: 20px;
+  left: -5px;
+  top: 0;
 }
 
 .form__grid {
@@ -98,6 +100,10 @@ input, textarea:focus {
 .form {
   max-width: 580px;
   margin: 0 auto;
+  padding: 28px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  border-radius: 8px;
 }
 
 .form__flex {
@@ -122,10 +128,8 @@ input, textarea:focus {
   grid-template-columns: 250px 250px;
   grid-template-rows: 40px 40px 40px 40px 40px;
   gap: 32px 24px;
-  max-width: 580px;
-  padding: 28px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  max-width: 500px;
+  padding: 0;
   border: none;
   background-color: #fff;
 }
@@ -185,7 +189,6 @@ input, textarea:focus {
 
 .form__name {
   display: block;
-  padding-bottom: 12px;
 }
 
 
@@ -221,7 +224,7 @@ textarea {
 .form__check-discount:before {
   content: '';
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: 6px;
   display: block;
   width: 40px;
@@ -252,7 +255,7 @@ textarea {
   opacity: 1
 }
 
-.form__check-discount:checked+.form__name-checked {
+.form__check-discount:checked+.form__discount {
   background-color: #F2F0F9;
 }
 
